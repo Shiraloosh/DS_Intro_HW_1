@@ -20,7 +20,7 @@ print(my_func(8,73,-3))
 
 
 #B
-def  convert(hours, minutes):
+def  convert(hours, minutes=0):
     try:
         hours=float(hours)
         minutes=float(minutes)
@@ -32,5 +32,5 @@ def  convert(hours, minutes):
     sec=int(hours*3600+minutes*60)
     return(sec)
 
-
-print(convert(1.2288,3))
+print(convert(1,3))
+print(convert(1.75))
