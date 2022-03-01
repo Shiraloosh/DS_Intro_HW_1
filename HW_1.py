@@ -29,8 +29,8 @@ def  convert(hours, minutes):
     if(hours<0 or minutes<0):
       return('Input error!')   
     
-    sec=hours*3600+minutes*60
+    sec=int(hours*3600+minutes*60)
     return(sec)
 
 
-print(convert(7,-2.5))
+print(convert(1.2288,3))
