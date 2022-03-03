@@ -1,22 +1,17 @@
 #A
-def my_func(x1, x2, x3):
-    try:
-        x1=float(x1)
-        x2=float(x2)
-        x3=float(x3)
+def my_func1(x1, x2, x3):
+    if(isinstance(x1, float ) and isinstance( x2, float ) and isinstance( x3, float )):
         denominator= (x1+x2+x3)
-    except:
+        if(denominator==0):
+            return('Not a number – denominator equals zero')
+        result=((x1+x2+x3)*(x2+x3)*x3)/denominator
+        return(result)
+    else:
         return('Error: parameters should be float')
-    
-    if(denominator==0):
-        return('Not a number – denominator equals zero')
-    
-    result=((x1+x2+x3)*(x2+x3)*x3)/denominator
-    return(result)
 
+print(my_func1(9.0,3.0,8.0))
 
-
-print(my_func(8,73,-3))
+print(my_func1('VV',3.0,8.0))
 
 
 #B
@@ -33,4 +28,4 @@ def  convert(hours, minutes=0):
     return(sec)
 
 print(convert(1,3))
-print(convert(1.75))
+print(convert(1,9.9))
